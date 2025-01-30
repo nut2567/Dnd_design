@@ -1,17 +1,14 @@
 "use client"
-import { useSession } from "next-auth/react"
 import Image from "next/image";
-export default function Layout({ mobile, sidebarOpen }) {
+export default function Layout() {
 
-  const { data: session } = useSession()
   return (
-    <div className={`flex flex-col items-center transition-all duration-300 ${sidebarOpen && !mobile ? 'ml-64' : ''}`}>
+    <div className={`flex flex-col items-center transition-all duration-30`}>
       <header
         className="bg-zinc-600 w-full text-white p-4 text-center text-2xl"
       >
         <div className="navbar bg-base-100 rounded-2xl">
           <div className="flex-1">
-            <p className="ml-10 text-xl">{session?.user?.name}</p>
           </div>
           <div className="flex-none">
             <div className="dropdown dropdown-end">
