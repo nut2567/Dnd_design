@@ -43,12 +43,12 @@ const Dustbin: React.FC<DustbinProps> = ({ greedy, children }) => {
   drop(ref); // เชื่อม ref ของ drop เข้ากับ ref ของ div
 
   return (
-    <div ref={ref} className={`h-full w-full ${backgroundColor} `}>
+    <div ref={ref} className={`min-h-full w-full  ${backgroundColor} `}>
       <br />
       {/* {hasDropped && <span>dropped {hasDroppedOnChild && ' on child'}</span>} */}
 
       {formElements.map((el, index) => (
-        <div key={index} style={{ marginBottom: '10px' }}>
+        <div key={index} >
           {el.type === 'FORM_ELEMENT' && <input type={el.name} placeholder={el.label || ""} />}
         </div>
       ))}
@@ -60,8 +60,8 @@ const Dustbin: React.FC<DustbinProps> = ({ greedy, children }) => {
 export default function DragAndDropExample() {
 
   return (
-    <main className="flex-1 grid items-center justify-items-center h-full font-[family-name:var(--font-geist-sans)] p-10">
-      <div className=" bg-gray-200 min-h-full w-10/12 text-black">
+    <main className="flex-1 grid items-center justify-items-center h-full p-10">
+      <div className=" bg-gray-200 min-h-full w-10/12 text-black flex flex-1 ">
 
         <Dustbin>
         </Dustbin>

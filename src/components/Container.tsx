@@ -1,5 +1,4 @@
 "use client";
-import { Box } from './Box'
 import { Dustbin } from './Dustbin'
 
 export default function Container() {
